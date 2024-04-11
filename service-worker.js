@@ -1,6 +1,6 @@
-const GHPATH = 'http://localhost:8000/';
+const GHPATH = 'https://cattimothy.github.io/Hobe-Fort-Travel/';
 // Change to a different app prefix name
-const APP_PREFIX = 'my_awesome_';
+const APP_PREFIX = 'Hobe_Fort_Travel';
 const VERSION = 'version_01';
 
 // The files to make available for offline use. make sure to add 
