@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../assets/css/mdb.min.css">
+	<link rel="stylesheet" href="../../assets/bootstrap-icons/bootstrap-icons.min.css">
+	<link rel="stylesheet" href="../../assets/css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../../assets/css/main.css">
+    <style>
+        .swiper-slide:nth-of-type(1) {
+			background-image: url('../../assets/img/封面/賞櫻之路.jpg');
+        }
+        .swiper-slide:nth-of-type(2) {
+			background-image: url('../../assets/img/路線圖/賞櫻之路.jpg');
+        }
+        .swiper-slide:nth-of-type(3) {
+			background-color: white;
+        }
+        .swiper-slide:nth-of-type(4) {
+			background-color: white;
+        }
+    </style>
+</head>
+<body class="theme" id="body">
+<div class="swiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+			<h1 class="ml1">
+			  <span class="text-wrapper">
+				<span class="line line1"></span>
+				<span class="letters">賞櫻之路</span>
+				<span class="line line2"></span>
+			  </span>
+			</h1>
+		</div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide">
+			<div style="max-height: 100vh;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;max-width: 80vh;"><img src="../../assets/img/手繪地圖/賞櫻之路.jpg" width="100%" style="">
+				<!-- 楓樹湖步道 -->
+				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#楓樹湖步道" style="position: absolute;top: 7%;left: 67%;height: 37%;opacity: 0.1;background-color: black;width: 10%;"></button>
+				<!-- 天元宮 -->
+				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#天元宮" style="width: 10%;position: absolute;top: 11%;left: 42%;height: 22%;opacity: 0.1;background-color: black;"></button>
+			</div>
+		</div>
+        <div class="swiper-slide">
+			<br>
+			<h1>詳情介紹</h1>
+			<hr>
+			<div class="d-grid gap-2 container">
+				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#楓樹湖步道">
+				  <h2>楓樹湖步道</h2>
+				</button>
+				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#天元宮">
+				  <h2>天元宮</h2>
+				</button>
+			</div>
+			<div class="d-grid gap-2 container position-absolute bottom-0">	
+				<a href="index.html" type="button" class="btn btn-success m-4">
+					<h2>下一個行程</h2>
+				</a>
+			</div>
+		</div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+    
+    <!-- 如果需要滚动条 -->
+    <div class="swiper-scrollbar"></div>
+</div>
+
+
+
+<!-- 楓樹湖步道 -->
+<div class="modal fade" id="楓樹湖步道" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">楓樹湖步道</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+		<p>　　楓樹湖步道位於新北市淡水區的楓樹湖社區，早期為通往面天山的一條秘徑，還有一種說法是種植金花石蒜農民的農路，路的最後也可連接面天古道。漫步在楓樹湖步道，沿途除了可欣賞金花石蒜外，還有吉野櫻、李花、櫻花等漂亮的風景。此地區曾為全台最早的觀光果園，隨著時代變遷及產業轉型，近年來陸續修築成登山步道，促進觀光發展。
+		</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 天元宮 -->
+<div class="modal fade" id="天元宮" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">天元宮</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+		<p> 　　這裡以櫻花美景聞名遐邇，每年三月下旬為最佳賞櫻時段，一整片的櫻花是在約莫1970年代左右，由上百位志工親手栽種，櫻花是選用台灣原生種山櫻花，搭配日本吉野櫻，而天元宮結合了兩種櫻花的特色，形成相當優美的景觀，成為淡水天元宮最獨特的自然奇景。
+		</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="../../assets/js/jquery-3.7.1.min.js"></script>
+<script src="../../assets/js/anime.min.js"></script>
+<script src="../../assets/js/popper.min.js"></script>
+<script src="../../assets/js/bootstrap.min.js"></script>
+<script src="../../assets/js/mdb.umd.min.js"></script>
+<script src="../../assets/js/swiper-bundle.min.js"></script>
+<script src="../../assets/js/script.js"></script>
+<script src = "../../assets/js/主題.js"></script>
+</body>
+</html>

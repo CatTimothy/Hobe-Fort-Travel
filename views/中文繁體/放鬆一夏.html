@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../assets/css/mdb.min.css">
+	<link rel="stylesheet" href="../../assets/bootstrap-icons/bootstrap-icons.min.css">
+	<link rel="stylesheet" href="../../assets/css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../../assets/css/main.css">
+    <style>
+        .swiper-slide:nth-of-type(1) {
+			background-image: url('../../assets/img/封面/放鬆一夏.jpg');
+        }
+        .swiper-slide:nth-of-type(2) {
+			background-image: url('../../assets/img/路線圖/放鬆一夏.jpg');
+        }
+        .swiper-slide:nth-of-type(3) {
+			background-color: white;
+        }
+        .swiper-slide:nth-of-type(4) {
+			background-color: white;
+        }
+    </style>
+</head>
+<body class="theme" id="body">
+<div class="swiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+			<h1 class="ml1">
+			  <span class="text-wrapper">
+				<span class="line line1"></span>
+				<span class="letters">放鬆一夏</span>
+				<span class="line line2"></span>
+			  </span>
+			</h1>
+		</div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide">
+			<div style="max-height: 100vh;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;max-width: 80vh;"><img src="../../assets/img/手繪地圖/放鬆一夏.jpg" width="100%" style="">
+				<!-- 淡海情人橋 -->
+				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#淡海情人橋" style="position: absolute;top: 6%;left: 10%;height: 7%;opacity: 0.1;background-color: black;width: 10%;transform: rotate(345deg);"></button>
+				<!-- 程氏古厝 -->
+				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#程氏古厝" style="width: 27%;position: absolute;top: 78%;left: 8%;height: 6%;opacity: 0.1;background-color: black;"></button>
+				<!-- 沙崙海灘 -->
+				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#沙崙海灘" style="width: 14%;position: absolute;top: 26%;left: 52%;height: 8%;opacity: 0.1;background-color: black;transform: rotate(352deg);"></button>
+			</div>
+		</div>
+        <div class="swiper-slide">
+			<br>
+			<h1>詳情介紹</h1>
+			<hr>
+			<div class="d-grid gap-2 container">
+				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#淡海情人橋">
+				  <h2>淡海情人橋</h2>
+				</button>
+				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#程氏古厝">
+				  <h2>程氏古厝</h2>
+				</button>
+				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#沙崙海灘">
+				  <h2>沙崙海灘</h2>
+				</button>
+			</div>
+			<div class="d-grid gap-2 container position-absolute bottom-0">	
+				<a href="index.html" type="button" class="btn btn-success m-4">
+					<h2>下一個行程</h2>
+				</a>
+			</div>
+		</div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+    
+    <!-- 如果需要滚动条 -->
+    <div class="swiper-scrollbar"></div>
+</div>
+
+
+
+<!-- 淡海情人橋 -->
+<div class="modal fade" id="淡海情人橋" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">淡海情人橋</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+		<p>　　本橋於2003年2月14日情人節當天正式啟用並命名為情人橋，總長196公尺，步行通過約3分鐘，柔美的色調搭配上帆船的造型受到不少情侶的喜愛，但傳說中情人在過橋時，一定要手牽手走過且不能回頭，如果晚上橋上打光或燈光轉至綠色時，情侶不能互相直視，否則就可能分手。
+		</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 程氏古厝 -->
+<div class="modal fade" id="程氏古厝" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">程氏古厝</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+		<p> 　　在清光緒初年創建的程氏古厝，為典型的三合院農舍，採用唐山斗磚和山牆瓦衫，古厝周遭有竹圍環繞、渠水流過，展現滿滿的閩南人建築特色與人文特色，也是淡水目前開放的古蹟景點中，唯一以漢人傳統民居為主題的歷史建物
+		</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 沙崙海灘 -->
+<div class="modal fade" id="沙崙海灘" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">沙崙海灘</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+		<p> 　　又名「沙崙海水浴湯」，雖然這裡因為著名的美景成為了許多人拍攝婚紗的熱門景點，平常也有民眾喜歡來這裡觀光，但因先前有發生過溺斃等案件，被列為危險海域，因此建議儘量不要下水，此外，根據政府報告結果，每年四月至九月海域屬於低度風險，所以這個時間段去觀光較為安全。
+		</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="../../assets/js/jquery-3.7.1.min.js"></script>
+<script src="../../assets/js/anime.min.js"></script>
+<script src="../../assets/js/popper.min.js"></script>
+<script src="../../assets/js/bootstrap.min.js"></script>
+<script src="../../assets/js/mdb.umd.min.js"></script>
+<script src="../../assets/js/swiper-bundle.min.js"></script>
+<script src="../../assets/js/script.js"></script>
+<script src = "../../assets/js/主題.js"></script>
+</body>
+</html>

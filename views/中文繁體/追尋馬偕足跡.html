@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../assets/css/mdb.min.css">
+	<link rel="stylesheet" href="../../assets/bootstrap-icons/bootstrap-icons.min.css">
+	<link rel="stylesheet" href="../../assets/css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../../assets/css/main.css">
+    <style>
+        .swiper-slide:nth-of-type(1) {
+			background-image: url('../../assets/img/封面/追尋馬偕足跡.jpg');
+        }
+        .swiper-slide:nth-of-type(2) {
+			background-image: url('../../assets/img/路線圖/追尋馬偕足跡.jpg');
+        }
+        .swiper-slide:nth-of-type(3) {
+			background-color: white;
+        }
+        .swiper-slide:nth-of-type(4) {
+			background-color: white;
+        }
+    </style>
+</head>
+<body class="theme" id="body">
+<div class="swiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+			<h1 class="ml1">
+			  <span class="text-wrapper">
+				<span class="line line1"></span>
+				<span class="letters">追尋馬偕足跡</span>
+				<span class="line line2"></span>
+			  </span>
+			</h1>
+		</div>
+        <div class="swiper-slide"></div>
+        <div class="swiper-slide">
+			<div style="max-height: 100vh;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%;max-width: 80vh;"><img src="../../assets/img/手繪地圖/追尋馬偕足跡.jpg" width="100%" style="">
+				<!-- 馬偕租屋處 -->
+				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#馬偕租屋處" style="position: absolute;top: 36%;left: 67%;height: 5%;opacity: 0.1;background-color: black;width: 27%;transform: rotate(348deg);"></button>
+				<!-- 滬尾偕醫館 -->
+				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#滬尾偕醫館" style="width: 24%;position: absolute;top: 60%;left: 69%;height: 5%;opacity: 0.1;background-color: black;"></button>
+			</div>
+		</div>
+        <div class="swiper-slide">
+			<br>
+			<h1>詳情介紹</h1>
+			<hr>
+			<div class="d-grid gap-2 container">
+				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#馬偕租屋處">
+				  <h2>馬偕租屋處</h2>
+				</button>
+				<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#滬尾偕醫館">
+				  <h2>滬尾偕醫館</h2>
+				</button>
+			</div>
+			<div class="d-grid gap-2 container position-absolute bottom-0">	
+				<a href="index.html" type="button" class="btn btn-success m-4">
+					<h2>下一個行程</h2>
+				</a>
+			</div>
+		</div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+    
+    <!-- 如果需要滚动条 -->
+    <div class="swiper-scrollbar"></div>
+</div>
+
+
+
+<!-- 馬偕租屋處 -->
+<div class="modal fade" id="馬偕租屋處" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">馬偕租屋處</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+		<p>　　淡水馬偕街24號，馬偕博士初抵淡水的住所。成為傳教、教育和醫療基地，對北臺灣做出深遠貢獻。
+		</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 滬尾偕醫館 -->
+<div class="modal fade" id="滬尾偕醫館" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">滬尾偕醫館</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+		<p> 　　它是北部的第一間醫院且現今被認定為三級古蹟。當時馬偕和他的助手及他所邀請的外聘醫生在此幫大家看病，拔牙。現在裡面仍有馬偕當時所使用的一些醫療用品和生活用品及場景等等可供人參觀。它的建築風格為中西合併，為馬偕所設計。
+		</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<script src="../../assets/js/jquery-3.7.1.min.js"></script>
+<script src="../../assets/js/anime.min.js"></script>
+<script src="../../assets/js/popper.min.js"></script>
+<script src="../../assets/js/bootstrap.min.js"></script>
+<script src="../../assets/js/mdb.umd.min.js"></script>
+<script src="../../assets/js/swiper-bundle.min.js"></script>
+<script src="../../assets/js/script.js"></script>
+<script src = "../../assets/js/主題.js"></script>
+</body>
+</html>

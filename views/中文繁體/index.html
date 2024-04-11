@@ -1,0 +1,552 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../assets/css/mdb.min.css">
+	<link rel="stylesheet" href="../../assets/bootstrap-icons/bootstrap-icons.min.css">
+<style>
+.container {
+  max-width: 600px;
+}
+</style>
+</head>
+<body>
+<div class="container mt-5">
+  <h2 class="text-center mb-4">請回答以下問題</h2>
+  <form id="questionForm">
+    <div id="questions"></div>
+  </form>
+  <button type="submit" class="btn btn-primary btn-block mt-4" style="width:100%" onclick="redirectToRandomUrl();">提交</button>
+</div>
+<div class="btn btn-primary btn-block mt-4" style="width:100%"></div>
+
+	<script src="../../assets/js/jquery-3.7.1.min.js"></script>
+	<script src="../../assets/js/anime.min.js"></script>
+	<script src="../../assets/js/popper.min.js"></script>
+	<script src="../../assets/js/bootstrap.min.js"></script>
+	<script src="../../assets/js/mdb.es.min.js"></script>
+	<script src="../../assets/js/script.js"></script>
+<script>
+//隨機導向主題
+const urlList = [
+	'一起踏入藝術界.html',
+	'古蹟巡禮.html',
+	'放鬆一夏.html',
+	'書香園地.html',
+	'追尋馬偕足跡.html',
+	'與夕陽有約.html',
+	'賞櫻之路.html',
+  // 添加更多網址
+];
+function redirectToRandomUrl() {
+  // 確保網址列表不為空
+  if (urlList.length === 0) {
+    console.error('網址列表為空');
+    return;
+  }
+
+  // 從列表中隨機選擇一個索引
+  const randomIndex = Math.floor(Math.random() * urlList.length);
+
+  // 獲取隨機選擇的網址
+  const randomUrl = urlList[randomIndex];
+
+  // 導向到隨機選擇的網址
+  window.location.href = randomUrl;
+}
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const questions = [
+    {
+      "question": "一年四季中你最喜歡哪個季節？",
+      "options": {
+        "a": "春",
+        "b": "夏",
+        "c": "秋",
+        "d": "冬"
+      }
+    },
+    {
+      "question": "得到了一張電影兌換卷，你會選擇下列哪類型電影？",
+      "options": {
+        "a": "恐怖",
+        "b": "喜劇",
+        "c": "愛情",
+        "d": "搞笑"
+      }
+    },
+    {
+      "question": "你面前擺著一盤食物，你覺得它是？",
+      "options": {
+        "a": "甜",
+        "b": "鹹",
+        "c": "酸",
+        "d": "辣"
+      }
+    },
+    {
+      "question": "如果你成為一位明星，你認為是下列何者？",
+      "options": {
+        "a": "諧星",
+        "b": "模特",
+        "c": "歌手",
+        "d": "演員"
+      }
+    },
+    {
+      "question": "當你在沙漠沒水可喝，你會選擇？",
+      "options": {
+        "a": "牛奶",
+        "b": "咖啡",
+        "c": "尿",
+        "d": "汽水"
+      }
+    },
+    {
+      "question": "放假時，下列選項活動哪項會成為你的首選？",
+      "options": {
+        "a": "追劇",
+        "b": "出門",
+        "c": "睡覺",
+        "d": "讀書"
+      }
+    },
+    {
+      "question": "被送到無人島只能選擇下列四項，你會選擇？",
+      "options": {
+        "a": "水",
+        "b": "食物",
+        "c": "書",
+        "d": "遊戲機"
+      }
+    },
+    {
+      "question": "下列運動選項第一首選？",
+      "options": {
+        "a": "球類",
+        "b": "跑步",
+        "c": "游泳",
+        "d": "動不了"
+      }
+    },
+    {
+      "question": "以下四種語言你最想學哪種的語言？",
+      "options": {
+        "a": "西班牙文",
+        "b": "泰文",
+        "c": "緬甸文",
+        "d": "原住民語"
+      }
+    },
+    {
+      "question": "以下的症狀你最怕得哪一個？",
+      "options": {
+        "a": "憂鬱症",
+        "b": "亞斯伯格症",
+        "c": "帕金森氏症",
+        "d": "肥胖症"
+      }
+    },
+    {
+      "question": "當選擇另一半時，你會選擇以下哪種人？",
+      "options": {
+        "a": "帥又胖",
+        "b": "高又醜",
+        "c": "醜又瘦",
+        "d": "普又矮"
+      }
+    },
+    {
+      "question": "你最不希望被朋友怎樣？",
+      "options": {
+        "a": "霸凌",
+        "b": "背刺",
+        "c": "分手",
+        "d": "絕交"
+      }
+    },
+    {
+      "question": "以下的飲料店中，你最喜歡哪間？",
+      "options": {
+        "a": "迷客夏",
+        "b": "龜記",
+        "c": "得正",
+        "d": "五桐號"
+      }
+    },
+    {
+      "question": "去到夜市，你會先選擇吃什麼？",
+      "options": {
+        "a": "臭豆腐",
+        "b": "蚵仔煎",
+        "c": "地瓜球",
+        "d": "牛排"
+      }
+    },
+    {
+      "question": "吃火鍋時，你會先吃什麼？",
+      "options": {
+        "a": "菜",
+        "b": "肉",
+        "c": "飯",
+        "d": "火鍋料"
+      }
+    },
+    {
+      "question": "以下的人掉到水裡，你會先救誰？",
+      "options": {
+        "a": "媽媽",
+        "b": "爸爸",
+        "c": "朋友",
+        "d": "另一半"
+      }
+    },
+    {
+      "question": "最常吃下列何種的主食?",
+      "options": {
+        "a": "飯",
+        "b": "麵",
+        "c": "麵包",
+        "d": "餅"
+      }
+    },
+    {
+      "question": "若有下列顏色衣服，挑一件你今天要穿的",
+      "options": {
+        "a": "黑色",
+        "b": "藍色",
+        "c": "紅色",
+        "d": "黃色"
+      }
+    },
+    {
+      "question": "最喜歡下列何種天氣?",
+      "options": {
+        "a": "陰天",
+        "b": "晴天",
+        "c": "雨天",
+        "d": "大風"
+      }
+    },
+    {
+      "question": "以下圖片四選一",
+      "options": {
+        "a": "b",
+       
+
+ "b": "c",
+        "c": "a",
+        "d": "d"
+      }
+    },
+    {
+      "question": "以下圖片四選一",
+      "options": {
+        "a": "1",
+        "b": "2",
+        "c": "3",
+        "d": "4"
+      }
+    },
+    {
+      "question": "平常飲料喜歡喝的甜度?",
+      "options": {
+        "a": "無糖",
+        "b": "微糖",
+        "c": "半糖",
+        "d": "全糖"
+      }
+    },
+    {
+      "question": "平常飲料喜歡喝的冰度?",
+      "options": {
+        "a": "微冰",
+        "b": "少冰",
+        "c": "去冰",
+        "d": "多冰"
+      }
+    },
+    {
+      "question": "下列頭髮長度，你會選擇？",
+      "options": {
+        "a": "光頭",
+        "b": "寸頭",
+        "c": "及肩",
+        "d": "及胸"
+      }
+    },
+    {
+      "question": "游泳時最常使用的姿勢是以下哪一種？",
+      "options": {
+        "a": "自由式",
+        "b": "仰式",
+        "c": "蛙式",
+        "d": "碟式"
+      }
+    },
+    {
+      "question": "你覺得睡覺最舒服的姿勢是？",
+      "options": {
+        "a": "側身並且轉向右側",
+        "b": "側身並且轉向左側",
+        "c": "趴著",
+        "d": "正躺"
+      }
+    },
+    {
+      "question": "最常因為什麼原因而買東西？",
+      "options": {
+        "a": "價錢",
+        "b": "品牌",
+        "c": "喜好",
+        "d": "跟風買"
+      }
+    },
+    {
+      "question": "假如您中頭獎會拿來做什麼事呢？",
+      "options": {
+        "a": "逃跑",
+        "b": "買房子",
+        "c": "買股票",
+        "d": "分享給親朋好友"
+      }
+    },
+    {
+      "question": "吃巧克力時最喜歡的濃度是？",
+      "options": {
+        "a": "77%",
+        "b": "85%",
+        "c": "90%",
+        "d": "100%"
+      }
+    },
+    {
+      "question": "如果可以開一家店 你最想要開以下哪一種？",
+      "options": {
+        "a": "餐飲店",
+        "b": "服飾店",
+        "c": "美容店",
+        "d": "雜貨店"
+      }
+    },
+    {
+      "question": "你的姓氏是？",
+      "options": {
+        "a": "毛",
+        "b": "包",
+        "c": "藍",
+        "d": "以上皆非"
+      }
+    },
+    {
+      "question": "一天中喜歡以下哪個時段？",
+      "options": {
+        "a": "早上",
+        "b": "中午",
+        "c": "下午",
+        "d": "晚上"
+      }
+    },
+    {
+      "question": "如果身上多一個器官，以下四項你想要選什麼？",
+      "options": {
+        "a": "眼睛",
+        "b": "鼻孔",
+        "c": "屁眼",
+        "d": "舌頭"
+      }
+    },
+    {
+      "question": "以下你最喜歡的課是？",
+      "options": {
+        "a": "國",
+        "b": "英",
+        "c": "數",
+        "d": "體"
+      }
+    },
+    {
+      "question": "如果被判死刑要選以下四項的哪種方式？",
+      "options": {
+        "a": "槍",
+        "b": "電",
+        "c": "砍",
+        "d": "毒"
+      }
+    },
+    {
+      "question": "你對這題的答對率是？",
+      "options": {
+        "a": "0%",
+        "b": "25%",
+        "c": "50%",
+        "d": "100%"
+      }
+    },
+    {
+      "question": "以下四個職位你要選？",
+      "options": {
+        "a": "工友",
+        "b": "保安",
+        "c": "打掃",
+        "d": "督導"
+      }
+    },
+    {
+      "question": "喜歡以下哪種繪畫派別？",
+      "options": {
+        "a": "抽象",
+        "b": "寫實",
+        "c": "幾何",
+        "d": "奔放"
+      }
+    },
+    {
+      "question": "喜歡以下哪種音樂？",
+      "options": {
+        "a": "搖滾",
+        "b": "抒情",
+        "c": "金屬",
+        "d": "鄉村"
+      }
+    },
+    {
+      "question": "以下四種動物選？",
+      "options": {
+        "a": "豬",
+        "b": "魚",
+        "c": "鳥",
+        "d": "蚊子"
+      }
+    },
+    {
+      "question": "最討厭別人在你旁邊做以下的哪種行為？",
+      "options": {
+        "a": "打嗝",
+        "b": "放屁",
+        "c": "吃鼻屎",
+        "d": "口臭"
+      }
+    },
+    {
+
+
+      "question": "你最討厭以下哪種人？",
+      "options": {
+        "a": "不懂裝懂的人",
+        "b": "雙面人",
+        "c": "機車班導",
+        "d": "愛情勒的人"
+      }
+    },
+    {
+      "question": "從以下選一個注音符號你會選？",
+      "options": {
+        "a": "ㄅ",
+        "b": "ㄆ",
+        "c": "ㄇ",
+        "d": "ㄈ"
+      }
+    },
+    {
+      "question": "從以下選擇一個你最喜歡通勤方式",
+      "options": {
+        "a": "汽車",
+        "b": "機車",
+        "c": "大眾運輸",
+        "d": "走路"
+      }
+    },
+    {
+      "question": "假日時來淡水觀光的目的是？",
+      "options": {
+        "a": "伴手禮",
+        "b": "景點",
+        "c": "路過而已",
+        "d": "以上皆是"
+      }
+    },
+    {
+      "question": "從以下選擇一種名產",
+      "options": {
+        "a": "魚酥",
+        "b": "阿給",
+        "c": "鐵蛋",
+        "d": "糕餅"
+      }
+    },
+    {
+      "question": "你的年齡是？",
+      "options": {
+        "a": "18歲",
+        "b": "30歲",
+        "c": "50歲",
+        "d": "50歲以上"
+      }
+    },
+    {
+      "question": "最想住在台灣的哪個區域",
+      "options": {
+        "a": "北",
+        "b": "中",
+        "c": "南",
+        "d": "離島"
+      }
+    },
+    {
+      "question": "選一個最喜歡的指甲長度",
+      "options": {
+        "a": "超短",
+        "b": "短",
+        "c": "長",
+        "d": "超長"
+      }
+    },
+    {
+      "question": "從下列姓氏中，照直覺選擇你覺得我姓是什麼？",
+      "options": {
+        "a": "陳",
+        "b": "林",
+        "c": "王",
+        "d": "黃"
+      }
+    }
+  ];
+
+  const form = document.getElementById('questionForm');
+  const questionsDiv = document.getElementById('questions');
+  const selectedQuestions = getRandomQuestions(questions, 5);
+
+  selectedQuestions.forEach((question, index) => {
+    const questionHtml = `
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">${index + 1}. ${question.question}</h5>
+          <div class="form-group">
+            ${Object.keys(question.options).map(option => `
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="question${index}" id="option${index}${option}" value="${option}">
+                <label class="form-check-label" for="option${index}${option}">${question.options[option]}</label>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+    `;
+    questionsDiv.innerHTML += questionHtml;
+  });
+
+  function getRandomQuestions(questions, num) {
+    const shuffled = questions.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, num);
+  }
+});
+</script>
+</body>
+</html>
