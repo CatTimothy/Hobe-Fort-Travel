@@ -1,4 +1,7 @@
-
+﻿.phone-frame {
+    width: 100%;
+    max-width: 70vh;
+}
 
 /* 封面動畫 */
 .ml1 {
@@ -61,7 +64,6 @@
 	font-weight: bold;
 }
 .theme .swiper {
-	width: 380px;
 	height: 100vh;
 }
 .theme .swiper-slide {
