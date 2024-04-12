@@ -1,3 +1,4 @@
+window.onload = function() {
   var mySwiper = new Swiper ('.swiper', {
 	keyboardControl : true,
 	mousewheelControl : true,
@@ -12,3 +13,4 @@
       el: '.swiper-scrollbar',
     },
   })
+}

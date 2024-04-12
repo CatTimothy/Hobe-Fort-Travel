@@ -7,16 +7,8 @@ function AtOnload() {
 		document.body.appendChild(element);
 	}
 	
-}
-if (window.addEventListener)
-  window.addEventListener("load", AtOnload, false);
-else if (window.attachEvent)
-  window.attachEvent("onload", AtOnload);
-else
-  window.onload = AtOnload;
-
-
-
+	
+	
 	// JavaScript Document// Wrap every letter in a span
 	var textWrapper = document.querySelector('.ml1 .letters');
 	textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
@@ -45,3 +37,20 @@ else
 		easing: "easeOutExpo",
 		delay: 1000
 	  });
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+if (window.addEventListener)
+  window.addEventListener("load", AtOnload, false);
+else if (window.attachEvent)
+  window.attachEvent("onload", AtOnload);
+else
+  window.onload = AtOnload;
