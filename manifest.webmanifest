@@ -1,8 +1,8 @@
 {
  "name": "滬尾行旅",
- "short_name": "hobe-fort-travel",
- "scope": "/",
- "start_url": ".",
+ "short_name": "滬尾行旅",
+ "scope": "/Hobe-Fort-Travel/",
+ "start_url": "/Hobe-Fort-Travel/",
  "icons": [
     {
       "src": "assets/icon/windows11/SmallTile.scale-100.png",
