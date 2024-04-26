@@ -1,9 +1,9 @@
 {
- "name": "滬尾行旅",
- "short_name": "滬尾行旅",
- "scope": "/Hobe-Fort-Travel/",
- "start_url": "/Hobe-Fort-Travel/",
- "icons": [
+  "name": "滬尾行旅",
+  "short_name": "滬尾行旅",
+  "scope": "/Hobe-Fort-Travel/",
+  "start_url": "/Hobe-Fort-Travel/",
+  "icons": [
     {
       "src": "assets/icon/windows11/SmallTile.scale-100.png",
       "sizes": "71x71"
@@ -453,7 +453,11 @@
       "sizes": "1024x1024"
     }
   ],
- "theme_color": "#ffffff",
- "background_color": "#ffffff",
- "display": "standalone"
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "id": "Hobe-Fort-Travel",
+  "description": "由CatTimothy製作\nCopyright ©2024 All rights reserved | 淡江高中人文社會班",
+  "lang": "zh",
+  "orientation": "portrait"
 }
